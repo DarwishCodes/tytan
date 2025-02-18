@@ -1,0 +1,31 @@
+.nav-link {
+  color: $color-black-80;
+  margin: 0 1rem;
+  font-family: Readex Pro;
+  font-weight: 400;
+  font-size: 1.854rem;
+  line-height: 2.317rem;
+  letter-spacing: 0%;
+
+  img {
+    margin-right: 5px;
+  }
+}
+.navbar-nav .dropdown-menu {
+  position: absolute;
+}
+
+.navbar-nav {
+  background-color: $color-secondary;
+  padding: 1.5rem 5rem;
+  border-radius: 1.2rem;
+
+  .active {
+    color: $color-primary !important;
+  }
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: center;
+}

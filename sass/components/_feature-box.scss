@@ -1,0 +1,33 @@
+.feature {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+    letter-spacing: 0;
+    color: $color-black-80;
+    margin-bottom: 1.9rem;
+  }
+
+  &__text {
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    letter-spacing: 0;
+    color: $color-black-50;
+    text-align: center;
+  }
+
+  &__icon {
+    height: 8.2rem;
+    width: 8.2rem;
+    margin-bottom: 3.3rem;
+  }
+}

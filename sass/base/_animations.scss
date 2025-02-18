@@ -1,0 +1,18 @@
+@keyframes animatedBackground-1 {
+  from {
+    background-position: 0 0;
+  }
+  /*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: 10000px 0; /* Move horizontally to the right */
+  }
+}
+@keyframes animatedBackground-2 {
+  from {
+    background-position: 0 0;
+  }
+  /*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: -10000px 0; /* Move horizontally to the right */
+  }
+}

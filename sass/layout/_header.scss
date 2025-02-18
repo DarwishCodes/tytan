@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  // background-color: $color-grey-1;
+  // border-bottom: 1px solid $color-grey-2;
+
+  &__logo {
+    img {
+      @include addMediaQuery(laptop) {
+        height: 2rem;
+      }
+    }
+  }
+  padding: 2.4rem 0;
+
+  &__cta {
+    display: flex;
+    .dropdown-toggle::after {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+      margin-right: 1rem;
+
+      @include addMediaQuery(laptop) {
+        display: flex;
+      }
+    }
+
+    &--desktop {
+      display: flex;
+      @include addMediaQuery(laptop) {
+        display: none;
+      }
+    }
+  }
+
+  &__cta-wrap {
+    display: flex;
+  }
+}

@@ -1,0 +1,15 @@
+.partners {
+  &__1 {
+    background-image: url(../img/partners-1.png);
+    height: 12.8rem;
+    background-position: 0 0;
+    margin-bottom: 2rem;
+    animation: animatedBackground-1 500s linear infinite;
+  }
+  &__2 {
+    background-image: url(../img/partners-2.png);
+    height: 12.8rem;
+    background-position: 0 0;
+    animation: animatedBackground-2 500s linear infinite;
+  }
+}

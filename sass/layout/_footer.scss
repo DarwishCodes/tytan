@@ -1,0 +1,38 @@
+.footer {
+  background-color: #181818;
+  padding: 6.4rem 0;
+
+  @include addMediaQuery(laptop) {
+    padding: 2rem 2rem;
+  }
+  &__link {
+    display: block;
+    color: #979aa0;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+    text-decoration: none;
+
+    &:hover {
+      color: #979aa09d;
+    }
+  }
+
+  &__heading {
+    color: #f9f9f9;
+    font-size: 1.6rem;
+  }
+
+  &__col {
+    padding: 0 8rem;
+    @include addMediaQuery(laptop) {
+      padding: 2rem 0;
+    }
+  }
+
+  &__logo {
+    @include addMediaQuery(laptop) {
+      text-align: center;
+    }
+  }
+}

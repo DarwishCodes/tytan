@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  //   background: rgba(0, 100, 0, 0.1) !important;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  // background-image: url('../img/single-repeatable-block.svg');
+  background-image: url("../img/single-repeatable-block.svg");
+  background-size:  39rem;
+  background-blend-mode: multiply;
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+.container {
+  max-width: 155.8rem;
+}
