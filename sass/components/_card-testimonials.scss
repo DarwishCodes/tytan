@@ -1,0 +1,165 @@
+// Variables
+$color-star: #FFB800;
+
+// Base styles
+// body {
+//     direction: rtl;
+//     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+// }
+
+
+// Individual testimonial
+.testimonial {
+    padding: 20px;
+
+    &__content {
+        background-color: $color-primary-dark;
+        border-radius: 4px;
+        padding: 3.4rem;
+        position: relative;
+        margin-bottom: 3.6rem;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -3.3rem;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-left: 4.5rem solid transparent;
+            border-right: 4.5rem solid transparent;
+            border-top: 7rem solid $color-primary;
+        }
+    }
+
+    &__quote {
+        color: $color-secondary;
+        font-family: 'IBM Plex Sans Arabic', sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 3rem;
+        letter-spacing: 0;
+    }
+
+    &__rating {
+        direction: ltr;
+        display: flex;
+        gap: 4px;
+    }
+
+    &__star {
+        color: $color-star;
+        font-size: 18px;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+    }
+
+    &__avatar {
+        border-radius: 50%;
+        margin-left: 12px;
+        object-fit: cover;
+    }
+
+    &__name {
+        color: $color-black;
+        font-family: 'Readex Pro', sans-serif;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        letter-spacing: 0;
+        margin-right: 1.4rem;
+
+    }
+
+    &__nav-arrows-group {
+        display: flex;
+        justify-content: end;
+        float: left;
+    }
+
+    &__arrow {
+        border-radius: 4px;
+        background-color: $color-tertiary;
+        width: 4.6rem;
+        height: 4.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 1.85rem;
+
+        img {
+            width: 1.3rem;
+            height: auto;
+        }
+
+        &--next {
+            img {
+                transform: rotate(180deg);
+            }
+        }
+
+        &--prev {
+
+            // img {
+            //     transform: rotate(180deg);
+            // }
+
+        }
+    }
+
+    &__photo-box {
+        width: 5.3rem;
+        height: 5.3rem;
+    }
+
+    &__icon {
+        width: 3.5rem !important;
+    }
+}
+
+// Navigation arrows
+// .nav-arrow {
+//     position: absolute;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     width: 40px;
+//     height: 40px;
+//     background-color: white;
+//     border-radius: 50%;
+//     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     cursor: pointer;
+//     font-size: 24px;
+//     color: $color-text;
+//     transition: all 0.3s ease;
+
+//     &:hover {
+//         background-color: $color-primary;
+//         color: white;
+//     }
+
+//     &--prev {
+//         left: -20px;
+//     }
+
+//     &--next {
+//         right: -20px;
+//     }
+// }
+
+// // Responsive adjustments
+// @media (max-width: 768px) {
+//     .testimonials {
+//         padding: 20px 10px;
+//     }
+
+//     .nav-arrow {
+//         display: none;
+//     }
+// }
