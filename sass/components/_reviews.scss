@@ -1,9 +1,0 @@
-.reviews {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
-  @include addMediaQuery(laptop) {
-    margin: 2rem 0;
-  }
-}
