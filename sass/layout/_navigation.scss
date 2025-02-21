@@ -20,6 +20,14 @@
   padding: 1.5rem 5rem;
   border-radius: 1.2rem;
 
+  @include addMediaQuery(laptop) {
+    justify-content: center;
+    align-items: center;
+
+  }
+  @include addMediaQuery(phone-l) {
+    padding: 1.5rem 3rem;
+  }
   .active {
     color: $color-primary !important;
   }
@@ -28,4 +36,13 @@
 .navbar-collapse {
   display: flex;
   justify-content: center;
+}
+
+.navbar-show-mobile {
+  display: none;
+
+  @include addMediaQuery(laptop) {
+    display: block;
+
+  }
 }

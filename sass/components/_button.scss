@@ -5,23 +5,30 @@
   padding: 0.5rem 2.4rem;
   transform: translateY(0);
   transition: all 0.2s ease-in-out;
-  &-primary {
-    background-color: $color-primary;
-    box-shadow: 0px 1px 4px 2px #32475c2f;
-    //styleName: Light/Components/Button Large;
-    font-size: 1.4rem;
-    font-weight: 500;
-    line-height: 26px;
-    text-transform: uppercase;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 
+
+  &-primary {
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 3.12rem;
+    letter-spacing: 0;
+    color: $color-primary;
+    background-color: $color-secondary;
+    // max-width: 100%;
+    width: 70%;
+    padding: 1.5rem 0;
+    border-radius: 50px;
     &:hover {
-      background-color: $color-primary !important;
+      background-color: $color-secondary !important;
       transform: translateY(-3px);
+      color: $color-primary !important;
     }
 
     &:active {
-      background-color: $color-primary !important;
+      background-color: $color-secondary !important;
       transform: translateY(2px);
+      color: $color-primary !important;
       box-shadow: 0px 1px 1px 1px #32475c54;
     }
   }
@@ -33,6 +40,26 @@
     &:active {
       transform: translateX(0) !important;
     }
+  }
+
+  &-lang {
+    direction: ltr;
+    padding: 0.7rem 1.5rem;
+    background-color: $color-black-80 !important;
+    color: $color-white !important;
+    font-family: Readex Pro;
+    font-weight: 400;
+    font-size: 1.177rem;
+    line-height: 1.471rem;
+    letter-spacing: 0;
+    border-radius: 50px;
+
+    img {
+      width: 1.54rem;
+      height: 1.39rem;
+      margin-right: 0.5rem;
+    }
+
   }
 }
 

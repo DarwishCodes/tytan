@@ -9,10 +9,20 @@
     box-shadow: 0 0 50px rgba(0,0,0,0.2);
     z-index: 100;
 
+    @include addMediaQuery(laptop-l) {
+        width: 30rem;
+        height: 62rem;
+
+  }
+
     &__title {
         width: 38.5rem;
         text-align: center;
         margin-bottom: 2.9rem;
+
+        @include addMediaQuery(laptop) {
+            width: 100%;
+        }
     }
 
     &__notch {
@@ -67,6 +77,13 @@
 
     &__wrap {
         position: relative;
+
+        @include addMediaQuery(laptop) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__shape {
@@ -78,7 +95,7 @@
 
         &--2 {
             top: 40rem;
-            right: -1rem;
+            left: 12%;
         }
     }
 }

@@ -15,7 +15,7 @@ $color-star: #FFB800;
     &__content {
         background-color: $color-primary-dark;
         border-radius: 4px;
-        padding: 3.4rem;
+        padding: 1.6rem 1.9rem;
         position: relative;
         margin-bottom: 3.6rem;
 
@@ -29,6 +29,7 @@ $color-star: #FFB800;
             border-left: 4.5rem solid transparent;
             border-right: 4.5rem solid transparent;
             border-top: 7rem solid $color-primary;
+            z-index: -1;
         }
     }
 
@@ -39,10 +40,10 @@ $color-star: #FFB800;
         font-size: 2rem;
         line-height: 3rem;
         letter-spacing: 0;
+        margin-bottom: 3.1rem;
     }
 
     &__rating {
-        direction: ltr;
         display: flex;
         gap: 4px;
     }
@@ -120,46 +121,3 @@ $color-star: #FFB800;
         width: 3.5rem !important;
     }
 }
-
-// Navigation arrows
-// .nav-arrow {
-//     position: absolute;
-//     top: 50%;
-//     transform: translateY(-50%);
-//     width: 40px;
-//     height: 40px;
-//     background-color: white;
-//     border-radius: 50%;
-//     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     cursor: pointer;
-//     font-size: 24px;
-//     color: $color-text;
-//     transition: all 0.3s ease;
-
-//     &:hover {
-//         background-color: $color-primary;
-//         color: white;
-//     }
-
-//     &--prev {
-//         left: -20px;
-//     }
-
-//     &--next {
-//         right: -20px;
-//     }
-// }
-
-// // Responsive adjustments
-// @media (max-width: 768px) {
-//     .testimonials {
-//         padding: 20px 10px;
-//     }
-
-//     .nav-arrow {
-//         display: none;
-//     }
-// }

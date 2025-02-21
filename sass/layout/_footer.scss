@@ -1,5 +1,133 @@
 .footer {
-  background-color: #181818;
+  background-color: $color-primary;
   padding: 6.4rem 0;
   margin-top: -10rem;
+  color: $color-secondary;
+
+  &::after {
+    background-image: url(../img/shape-footer.svg);
+    background-repeat: no-repeat;
+    background-position: right 8rem;
+    background-size: 70rem;
+  }
+
+  &__title {
+    font-family: 'Lalezar', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 4.5rem;
+    letter-spacing: 0;
+    color: inherit;
+    margin-bottom: 2rem;
+  }
+
+  &__locations-box {
+    margin: 4rem 0;
+  }
+
+  &__locations {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 4.5rem;
+    letter-spacing: 0;
+    color: inherit;
+
+    list-style: none;
+
+  }
+  
+  &__heading {
+    font-family: Lalezar;
+    font-weight: 400;
+    font-size: 5.736rem;
+    line-height: 7.169rem;
+    letter-spacing: 0;
+    color: inherit;
+    margin-bottom: 2rem;
+  }
+
+  &__contant-box {
+    text-align: left;
+
+    @include addMediaQuery(laptop) {
+      text-align: center;
+    }
+  }
+
+  &__contanct {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 4.5rem;
+    letter-spacing: 0;
+    color: inherit;
+    word-break: break-all;
+
+    @include addMediaQuery(phone-l) {
+      font-size: 2rem;
+
+    }
+  }
+
+  &__logo {
+    margin-bottom: 6.9rem;
+
+    @include addMediaQuery(laptop) {
+      margin-bottom: 4.5rem;
+    }
+  }
+
+  &__social-links {
+    list-style: none;
+    display: flex;
+
+    @include addMediaQuery(laptop) {
+      justify-content: center;
+      margin-bottom: 2rem;
+      padding-left: 0;
+    }
+
+    li {
+      margin: 0 1rem;
+    }
+
+  }
+
+  &__terms-and-conditions {
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.61rem;
+    letter-spacing: 0;
+  }
+
+  &__copy-rights {
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.61rem;
+    letter-spacing: 0;
+
+    @include addMediaQuery(laptop) {
+      text-align: center;
+    }
+
+  }
+
+  &__show-mobile {
+    display: none;
+
+    @include addMediaQuery(laptop) {
+      display: block;
+    }
+  }
+
+  &__hide-mobile {
+    display: block;
+
+    @include addMediaQuery(laptop) {
+      display: none;
+    }
+  }
 }

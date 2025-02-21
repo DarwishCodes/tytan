@@ -22,9 +22,9 @@
       display: none;
       margin-right: 1rem;
 
-      @include addMediaQuery(laptop) {
-        display: flex;
-      }
+      // @include addMediaQuery(laptop) {
+      //   display: flex;
+      // }
     }
 
     &--desktop {

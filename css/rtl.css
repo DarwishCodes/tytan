@@ -2,10 +2,10 @@ html {
   direction: rtl;
 }
 
-.section-app__shape--1 {
+/* .section-app__shape--1 {
   left: 9rem;
   right: unset;
-}
+} */
 /* body {
   font-family: "Cairo", sans-serif;
 }

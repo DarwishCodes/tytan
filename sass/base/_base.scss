@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: inherit;
   //   background: rgba(0, 100, 0, 0.1) !important;
+  // border: 1px solid orangered;
 }
 
 html {
@@ -20,6 +21,11 @@ body {
   background-blend-mode: multiply;
 }
 
+// main {
+//   overflow-x: hidden;
+//   margin-left: -1rem;
+// }
+
 ::selection {
   background-color: $color-primary;
   color: $color-white;
@@ -27,4 +33,9 @@ body {
 
 .container {
   max-width: 155.8rem;
+  padding: 0 1rem;
+
+  @include addMediaQuery(laptop) {
+    padding: 0 2.5rem;
+  }
 }

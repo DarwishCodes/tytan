@@ -19,6 +19,13 @@ body {
     font-weight: normal;
     @include addMediaQuery(tablet) {
       font-size: 4.2rem;
+      line-height: 5rem;
+      font-size: 3.2rem;
+
+    }
+
+    @include addMediaQuery(phone-l) {
+      font-size: 3.4rem;
     }
   }
 
@@ -29,11 +36,25 @@ body {
       position: absolute;
       right: 0;
       bottom: -2.5rem;
+
+      @include addMediaQuery(laptop) {
+        right: unset;
+        right: 50%;
+        transform: translateX(50%);
+      }
+      @include addMediaQuery(tablet) {
+        width: 10rem;
+      }
+
     }
 
     span {
       margin-bottom: 4rem;
       display: inline-block;
+    }
+
+    &-hero {
+
     }
 
     &-2 {
@@ -57,6 +78,15 @@ body {
         left: 0;
         right: unset;
         bottom: -5.5rem;
+
+        @include addMediaQuery(laptop) {
+          right: 50%;
+          transform: translateX(50%);
+          left: unset;
+        }
+        @include addMediaQuery(tablet) {
+          bottom: -2.5rem;
+        }
       }
     }
   }
@@ -151,6 +181,10 @@ body {
   font-weight: 400;
   word-wrap: break-word;
   color: $color-black-80;
+
+  @include addMediaQuery(laptop) {
+    text-align: center;
+  }
 
   &--size-32 {
     font-size: 3.2rem;

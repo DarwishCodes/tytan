@@ -6,16 +6,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Lalezar&family=Readex+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Lalezar&family=Readex+Pro&display=swap" rel="stylesheet">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.1-web/css/all.min.css"
-      rel="stylesheet"
     />
 
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
@@ -38,7 +34,7 @@
 
             <div class="header__cta header__cta--desktop">
               <li class="nav-item dropdown u-margin-right-small">
-                <a
+                <!-- <a
                   class="nav-link dropdown-toggle"
                   href="#"
                   id="navbarDropdownMenuLink"
@@ -47,7 +43,7 @@
                   aria-expanded="false"
                 >
                   <img src="img/lang.svg" alt="" />
-                </a>
+                </a> -->
                 <ul
                   class="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink"
@@ -56,7 +52,7 @@
                   <li><a class="dropdown-item" href="#">EN</a></li>
                 </ul>
               </li>
-              <button type="button" class="btn btn-primary">English</button>
+              <a href="#" class="btn btn-lang"><img src="img/lang.svg" alt=""> English</a>
             </div>
             <div class="header__cta-wrap">
               <div class="header__cta header__cta--mobile">
@@ -69,7 +65,6 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    <img src="img/lang.svg" alt="" />
                   </a>
                   <ul
                     class="dropdown-menu"
@@ -79,9 +74,6 @@
                     <li><a class="dropdown-item" href="#">EN</a></li>
                   </ul>
                 </li>
-                <button type="button" class="btn btn-primary">
-                  اصبح تاجرا
-                </button>
               </div>
               <button
                 class="navbar-toggler"
@@ -98,11 +90,14 @@
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
+
                 <a class="nav-link" href="#who-are-we">الوظائف</a>
 
                 <a class="nav-link" aria-current="page" href="#"
                   >تواصل معنا</a
                 >
+                <a href="#" class="btn btn-lang navbar-show-mobile"><img src="img/lang.svg" alt=""> English</a>
+
                 <!-- <a class="nav-link" href="#app-features">ميزات التطبيق</a> -->
 
                 <!-- <a class="nav-link" href="#partners">الشركاء</a> -->
@@ -111,7 +106,7 @@
               </div>
             </div>
 
-            <a class="navbar-brand u-margin-right-small" href="#">
+            <a class="navbar-brand" href="#">
               <div class="header__logo">
                 <img src="img/logo.svg" alt="" /></div
             ></a>
@@ -126,7 +121,10 @@
             <div class="col-lg-12">
               <div class="hero__text-block">
                 <h1 class="heading heading--primary u-margin-bottom-medium hero__primary">
-                  مع تايتن مقاضيك توصل لبابك طازجة وبأسرع وقت                
+                  مع                 <span class="heading--primary-underline">
+                    <span>تايتن</span>
+                    <img src="img/hero-underline.svg" alt="">   
+                  </span> مقاضيك توصل لبابك طازجة وبأسرع وقت                
                 </h1>
                 <p class="paragraph u-margin-bottom-medium hero__text">
                   مقاضيك الطازجة توصلك لباب بيتك بسرعة وسهولة، وقتما تحتاجها! اطلب اونلاين، وتتبع طلبك وخلي التوصيل علينا!
@@ -141,16 +139,19 @@
                 <img class="hero__shape--1" src="img/shape-phones.png" alt="">
                 <img class="hero__shape--2" src="img/shape.svg" alt="">
               </div>
-              <div class="hero__banner">
-                <div class="hero__banner-container">
-                    <div class="hero__banner-item">جودة وأمان</div>
-                    <div class="hero__banner-item">خدمة التوصيل 24/7</div>
-                    <div class="hero__banner-item">سهولة التسوق</div>
-                    <div class="hero__banner-item">عروض يومية مميزة</div>
-                    <div class="hero__banner-item">منتجات طازجة</div>
-                    <div class="hero__banner-item">سرعة في التوصيل</div>
+              <div class="hero__banner-wraper">
+                <div class="hero__banner">
+                  <div class="hero__banner-container">
+                    <div class="hero__banner-item" aria-hidden="true">جودة وأمان</div>
+                    <div class="hero__banner-item" aria-hidden="true">خدمة التوصيل 24/7</div>
+                    <div class="hero__banner-item" aria-hidden="true">سهولة التسوق</div>
+                    <div class="hero__banner-item" aria-hidden="true">عروض يومية مميزة</div>
+                    <div class="hero__banner-item" aria-hidden="true">منتجات طازجة</div>
+                    <div class="hero__banner-item" aria-hidden="true">سرعة في التوصيل</div>
                 </div>
-            </div>
+              </div>
+              </div>
+
             </div>
             <!-- <div class="col-lg-6">
               <div class="hero__image">
@@ -189,7 +190,7 @@
           </div>
           <div class="row">
             <div class="col-lg-3">
-              <div class="section-app__text-box">
+              <div class="section-app__text-box section-app__text-box--desktop">
                 <h2 class="heading--secondary">البائع سيرى الطلب ويقوم
                   بتجهيزه.</h2>
               </div>
@@ -216,6 +217,10 @@
           </div>
           <div class="row">
             <div class="col-lg-7">
+              <div class="section-app__text-box section-app__text-box--mobile">
+                <h2 class="heading--secondary">البائع سيرى الطلب ويقوم
+                  بتجهيزه.</h2>
+              </div>
               <div class="section-app__photo-box">
                 <!-- <h1
                   class="heading--primary"
@@ -323,7 +328,7 @@
     </section>
     <section class="features">
       <div class="container">
-        <div class="row">
+        <div class="row features__column-reverse">
           <div class="col-lg-6">
             <div class="row">
               <div class="col-lg-6">
@@ -365,7 +370,7 @@
           <div class="col-lg-6">
             <div class="features__text">
               <div class="u-margin-bottom-medium">
-                <h1 class="heading heading--primary">المزايا الحصرية لتطبيق <span class="u-display-block">تايتن</span></h1>
+                <h1 class="heading heading--primary">المزايا الحصرية لتطبيق <span class="u-display-block u-color-orange">تايتن</span></h1>
               </div>
               <p class="paragraph">استمتع بتجربة تسوق سلسلة مع مزايا توفر لك الراحة، الأمان والعروض المميزة في مكان واحد</p>
             </div>
@@ -501,11 +506,11 @@
                         <p>تجربة رائعة! التطبيق سهل الاستخدام والتوصيل كان سريع جداً. انصح تتبع الطلب في الوقت الحقيقي. والسائق كان محترم. أكيد مستخدمه تاني</p>
                     </div>
                     <div class="testimonial__rating">
-                        <span class="testimonial__star">★</span>
-                        <span class="testimonial__star">★</span>
-                        <span class="testimonial__star">★</span>
-                        <span class="testimonial__star">★</span>
-                        <span class="testimonial__star">★</span>
+                        <span class="testimonial__star"><img src="img/icon-start-filled.svg" alt=""></span>
+                        <span class="testimonial__star"><img src="img/icon-start-filled.svg" alt=""></span>
+                        <span class="testimonial__star"><img src="img/icon-start-filled.svg" alt=""></span>
+                        <span class="testimonial__star"><img src="img/icon-start-filled.svg" alt=""></span>
+                        <span class="testimonial__star"><img src="img/icon-start-gray.svg" alt=""></span>
                     </div>
                 </div>
                 <div class="testimonial__author">
@@ -522,11 +527,11 @@
                       <p>تجربة رائعة! التطبيق سهل الاستخدام والتوصيل كان سريع جداً. انصح تتبع الطلب في الوقت الحقيقي. والسائق كان محترم. أكيد مستخدمه تاني</p>
                   </div>
                   <div class="testimonial__rating">
-                      <span class="testimonial__star">★</span>
-                      <span class="testimonial__star">★</span>
-                      <span class="testimonial__star">★</span>
-                      <span class="testimonial__star">★</span>
-                      <span class="testimonial__star">★</span>
+                      <span class="testimonial__star"><img src="img/icon-start-filled.svg" alt=""></span>
+                      <span class="testimonial__star"><img src="img/icon-start-filled.svg" alt=""></span>
+                      <span class="testimonial__star"><img src="img/icon-start-filled.svg" alt=""></span>
+                      <span class="testimonial__star"><img src="img/icon-start-filled.svg" alt=""></span>
+                      <span class="testimonial__star"><img src="img/icon-start-gray.svg" alt=""></span>
                   </div>
               </div>
               <div class="testimonial__author">
@@ -543,11 +548,11 @@
                     <p>تجربة رائعة! التطبيق سهل الاستخدام والتوصيل كان سريع جداً. انصح تتبع الطلب في الوقت الحقيقي. والسائق كان محترم. أكيد مستخدمه تاني</p>
                 </div>
                 <div class="testimonial__rating">
-                    <span class="testimonial__star">★</span>
-                    <span class="testimonial__star">★</span>
-                    <span class="testimonial__star">★</span>
-                    <span class="testimonial__star">★</span>
-                    <span class="testimonial__star">★</span>
+                    <span class="testimonial__star"><img src="img/icon-start-filled.svg" alt=""></span>
+                    <span class="testimonial__star"><img src="img/icon-start-filled.svg" alt=""></span>
+                    <span class="testimonial__star"><img src="img/icon-start-filled.svg" alt=""></span>
+                    <span class="testimonial__star"><img src="img/icon-start-filled.svg" alt=""></span>
+                    <span class="testimonial__star"><img src="img/icon-start-gray.svg" alt=""></span>
                 </div>
             </div>
             <div class="testimonial__author">
@@ -564,11 +569,11 @@
                   <p>تجربة رائعة! التطبيق سهل الاستخدام والتوصيل كان سريع جداً. انصح تتبع الطلب في الوقت الحقيقي. والسائق كان محترم. أكيد مستخدمه تاني</p>
               </div>
               <div class="testimonial__rating">
-                  <span class="testimonial__star">★</span>
-                  <span class="testimonial__star">★</span>
-                  <span class="testimonial__star">★</span>
-                  <span class="testimonial__star">★</span>
-                  <span class="testimonial__star">★</span>
+                  <span class="testimonial__star"><img src="img/icon-start-filled.svg" alt=""></span>
+                  <span class="testimonial__star"><img src="img/icon-start-filled.svg" alt=""></span>
+                  <span class="testimonial__star"><img src="img/icon-start-filled.svg" alt=""></span>
+                  <span class="testimonial__star"><img src="img/icon-start-filled.svg" alt=""></span>
+                  <span class="testimonial__star"><img src="img/icon-start-gray.svg" alt=""></span>
               </div>
           </div>
           <div class="testimonial__author">
@@ -588,6 +593,69 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
+          <div class="col-lg-4">
+            <div class="u-center-text footer__show-mobile">
+              <img class="footer__logo" src="img/logo-footer.svg" alt="">
+
+              <h3 class="footer__heading">
+                ارسل طلبك
+              </h3>
+              <a class="btn btn-primary" href="#">متابعة</a>
+            </div>
+            <div class="footer__locations-box">
+              <p class="footer__title">تايتن يغطي</p>
+              <ul class="footer__locations">
+                <li>كل أنحاء المدينة</li>
+              </ul>
+            </div>
+
+          </div>
+          <div class="col-lg-4">
+            <div class="u-center-text footer__hide-mobile">
+              <h3 class="footer__heading">
+                ارسل طلبك
+              </h3>
+              <a class="btn btn-primary" href="#">متابعة</a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer__contact-box">
+              <img class="footer__logo footer__hide-mobile" src="img/logo-footer.svg" alt="">
+              <h3 class="footer__title">
+                تواصل معنا
+              </h3>
+              <p class="footer__contanct">careers@madinastores.sa</p>
+              <p class="footer__contanct">+975-6768-8796</p>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="u-margin-top-large">
+          <div class="row">
+            <div class="col-lg-4">
+              <ul class="footer__social-links">
+                <li><a href="#"><img src="img/linkedin.svg" alt=""></a></li>
+                <li><a href="#"><img src="img/instagram.svg" alt=""></a></li>
+                <li><a href="#"><img src="img/behance.svg" alt=""></a></li>
+  
+              </ul>
+            </div>
+            <div class="col-lg-4"> 
+              <div class="u-center-text">
+              <p class="footer__terms-and-conditions">Terms & Conditions</p>
+              </div>
+            </div>
+  
+  
+            <div class="col-lg-4">
+              <div class="u-text-left">
+                <p class="footer__copy-rights">© Copyright 2024. Aditama Studio. All rights reserved.</p>
+  
+              </div>
+            </div>
+          </div>
+        </div>
 
         </div>
       </div>

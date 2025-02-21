@@ -3,6 +3,11 @@
   padding: 10.1rem 0 5rem 0;
   background-blend-mode: multiply;
 
+  @include addMediaQuery(tablet) {
+    padding: 5rem 0 5rem 0;
+
+  }
+
   &__text-block {
     display: flex;
     justify-content: center;
@@ -21,6 +26,10 @@
     text-align: center;
     width: 60%;
 
+    @include addMediaQuery(laptop) {
+      width: 100%;
+    }
+
   }
 
   &__cta {
@@ -37,6 +46,11 @@
         width: 100%;
       }
 
+      @include addMediaQuery(phone-l) {
+        width: 50%;
+
+      }
+
     }
 
     &--google {
@@ -46,23 +60,47 @@
       img {
         width: 100%;
       }
+
+      @include addMediaQuery(phone-l) {
+        width: 50%;
+
+      }
     }
   }
 
   &__text {
     width: 45%;
     text-align: center;
-  }
 
-  img {
     @include addMediaQuery(laptop) {
-      display: none;
+      width: 100%;
     }
   }
+
 
   &__shape-container {
     position: relative;
     height: 60rem;
+
+    img {
+      @include addMediaQuery(laptop) {
+        height: 35rem;
+      }
+
+      @include addMediaQuery(laptop) {
+        height: 20rem;
+      }
+
+      @include addMediaQuery(phone-l) {
+        height: auto;
+        width: 100%;
+      }
+    }
+    @include addMediaQuery(laptop) {
+      height: 30rem;
+    }
+
+
   }
 
   &__shape {
@@ -84,25 +122,30 @@
   }
 
   &__banner {
-    position: relative;
+    position: absolute;
     background-color: $color-primary;
-    padding: 15px 0;
-    width: 100vw;
-    transform: translateX(-50%) rotate(-3.38deg) translateY(-3.3rem);
-    left: 49.5%;
-    position: absolute !important;
+    padding: 8rem 0;
+    width: 100%;
+    left: 0;
+    transform: translateY(-9.3rem);
     z-index: 40;
+    overflow: hidden;
+    clip-path: polygon(0 54%, 100% 0, 100% 46%, 0% 100%);
 
-    &::after {
-      content: "";
-      position: absolute;
-      background-color: $color-primary;
-      width: 1rem;
-      height: 3rem;
-      right: 1rem;
-      top: 0;
-      transform: rotate(3.38deg);
+    @include addMediaQuery(desktop) {
+      font-size: 2rem;
+      transform: translateY(-9.3rem);
 
+    }
+
+    @include addMediaQuery(laptop-l) {
+      clip-path: unset;
+      padding: 2rem 0;
+      transform: translateY(0);
+    }
+
+    @include addMediaQuery(tablet) {
+      padding: 2rem 0;
     }
     }
         
@@ -113,6 +156,21 @@
     max-width: 155rem;
     margin: 0 auto;
     padding: 0 20px;
+    transform: rotate(-3.38deg);
+
+    @include addMediaQuery(desktop) {
+      transform: rotate(-5.3deg);
+    }
+
+    @include addMediaQuery(laptop-l) {
+      transform: rotate(0);
+    }
+
+    @include addMediaQuery(tablet) {
+      animation: marquee 10s linear infinite;
+      flex-shrink: 0;
+    }
+
 }
 
 &__banner-item {
@@ -123,50 +181,76 @@
     font-weight: 400;
     font-size: 3.192rem;
     line-height: 5.32rem;
-    letter-spacing: -0.64px;
+    letter-spacing: 0;
 
-    /* Add divider after each item except the last */
-    &:not(:last-child)::after {
+
+    &:not(:first-child)::after {
       content: '';
       position: absolute;
-      right: -10px; /* Adjust based on your SVG size */
+      right: -10px;
       top: 50%;
       transform: translateY(-50%);
-      width: 30px; /* Width of your SVG */
-      height: 30px; /* Height of your SVG */
+      width: 30px;
+      height: 30px;
       right: -64px;
       background-image: url("../img/shape-letter-t.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-    }
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-      .banner {
-          &__container {
-              flex-wrap: wrap;
-              gap: 10px;
-          }
-          
-          &__item {
-              flex: 0 0 33.333%;
-              
-              &:not(:last-child)::after {
-                  display: none;
-              }
-          }
+
+      @include addMediaQuery(desktop) {
+        width: 20px;
+        height: 20px;
+        margin-right: 2rem;
+
       }
-  }
+
+      @include addMediaQuery(tablet) {
+        position: unset;
+        transform: translateY(0);
+        margin-right: 2rem;
+      }
   
-}
+    }
+
+    @include addMediaQuery(desktop) {
+      font-size: 2rem;
+    }
+
+    @include addMediaQuery(laptop) {
+      font-size: 1.2rem;
+    }
+
+    @include addMediaQuery(tablet) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      margin: 0 2rem;
+    }
+  }
 }
 
 .features {
   padding-bottom: 20rem;
   
+  &__column-reverse {
+    flex-direction: column-reverse;
+  }
+  @include addMediaQuery(laptop) {
+    direction: rtl;
+
+  }
   &__text {
     padding: 0 7rem 0 17rem;
     margin-top: 2rem;
+
+    @include addMediaQuery(laptop) {
+      padding: 1rem 0;
+      text-align: center;
+  
+    }
   }
 }
 
@@ -229,36 +313,99 @@
       top: -6rem;
       transform: scaleX(-1);
 
+      @include addMediaQuery(laptop) {
+        right: 0;
+      }
+
+      @include addMediaQuery(phone-l) {
+        right: 0;
+        bottom: 0;
+        top: unset;
+        margin-top: 0 !important;
+        width: 150%;
+
+
+      }
+
     }
 
     &--2 {
       top: -23rem;
       transform: scaleX(-1);
 
+      @include addMediaQuery(laptop) {
+        right: 0;
+
+
+      }
+
+      @include addMediaQuery(phone-l) {
+        right: 0;
+        top: -4rem;
+        margin-top: 0;
+        bottom: 0;
+        top: unset;
+      }
+
     }
 
     &--3 {
       top: -19rem;
 
+      @include addMediaQuery(desktop) {
+        top: -12rem;
+
+      }
+
+      @include addMediaQuery(laptop) {
+        right: 0;
+        top: -2rem;
+        margin-top: 0 !important;
+
+      }
+
+      @include addMediaQuery(phone-l) {
+        bottom: 0;
+        top: unset;
+        margin-top: 0 !important;
+        width: 150%;
+
+      }
     }
   }
 
   &__shape {
     position: absolute;
-
+    z-index: -1;
     &--1 {
       top: -1rem;
       right: 9rem;
+
+      @include addMediaQuery(laptop) {
+        width: 20%;
+        top: unset;
+        bottom: -5rem;
+        right: 1rem;
+
+      }
     }
 
     &--2 {
       top: 1rem;
-      left: -4rem;
+      left: 1%;
+
+      @include addMediaQuery(laptop) {
+        width: 20%;
+      }
     }
 
     &--3 {
       left: 0;
       top: 8rem;
+
+      @include addMediaQuery(laptop) {
+        width: 20%;
+      }
     }
   }
   &__photo-box {
@@ -271,6 +418,7 @@
     position: relative;
     @include addMediaQuery(laptop) {
       text-align: center;
+      height: unset;
     }
     
   }
@@ -300,6 +448,28 @@
     &--padding {
       padding-left: 7rem;
     }
+
+    &--desktop {
+      display: flex;
+
+      @include addMediaQuery(laptop) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include addMediaQuery(laptop) {
+        display: block;
+        height: auto;
+      }
+    }
+
+    @include addMediaQuery(laptop) {
+      text-align: center;
+      padding: 2rem 0;
+    }
   }
 }
 
@@ -310,6 +480,12 @@
   background-repeat: no-repeat;
   background-position: right 8rem;
   background-size: 70rem;
+
+  @include addMediaQuery(laptop) {
+    background-size: 30rem;
+    padding: 17rem 0 12rem 0;
+
+  }
 
   &::after {
     content: '';
@@ -330,22 +506,13 @@
   }
 }
 
-// SASS with BEM
-// Variables
-// $color-primary: #0D8065;
-// $color-white: #fff;
 
-// Breakpoints
-$breakpoint-tablet: 768px;
-
-// Mixins
 @mixin respond-to($breakpoint) {
     @media (max-width: #{$breakpoint}) {
         @content;
     }
 }
 
-// Download Section
 .download {
     $self: &;
     position: relative;
@@ -376,9 +543,11 @@ $breakpoint-tablet: 768px;
         align-items: center;
         justify-content: space-between;
 
-        @include respond-to($breakpoint-tablet) {
+        @include addMediaQuery(laptop) {
             flex-direction: column;
             text-align: center;
+            padding: 5rem 1rem;
+
         }
     }
 
@@ -387,9 +556,14 @@ $breakpoint-tablet: 768px;
         flex: 0 0 60%;
         position: relative;
 
-        @include respond-to($breakpoint-tablet) {
+        @include addMediaQuery(laptop) {
             margin-bottom: 2rem;
+            display: none;
+
         }
+
+        // @include addMediaQuery(lap) {
+        // }
     }
 
     &__phones-image {
@@ -405,7 +579,7 @@ $breakpoint-tablet: 768px;
         text-align: right;
         color: $color-white;
 
-        @include respond-to($breakpoint-tablet) {
+        @include addMediaQuery(laptop) {
             text-align: center;
         }
     }
@@ -418,7 +592,7 @@ $breakpoint-tablet: 768px;
       letter-spacing: 0;
       margin-bottom: 7.6rem;      
 
-        @include respond-to($breakpoint-tablet) {
+      @include addMediaQuery(laptop) {
             font-size: 2rem;
         }
     }
@@ -429,7 +603,7 @@ $breakpoint-tablet: 768px;
         gap: 1rem;
         // justify-content: flex-end;
 
-        @include respond-to($breakpoint-tablet) {
+        @include addMediaQuery(laptop) {
             justify-content: center;
         }
     }
@@ -446,11 +620,20 @@ $breakpoint-tablet: 768px;
     &__store-image {
         height: 50px;
         width: auto;
+
+        @include addMediaQuery(phone-l) {
+          width: 100%;
+          height: auto;
+        }
     }
 }
 
 .section-partners {
   padding: 16.5rem 0;
+
+  @include addMediaQuery(laptop) {
+    padding: 10.5rem 0;
+  }
 
   &__photo-box {
     position: relative;
@@ -487,12 +670,31 @@ $breakpoint-tablet: 768px;
     height: 46.5rem;
     background: url('../img/shape-letter-t-circle.svg') center/contain no-repeat;
     // opacity: 0.1;
+    z-index: -1;
+
+    @include addMediaQuery(laptop) {
+      opacity: 0.3;
+    }
+    @include addMediaQuery(tablet) {
+      display: none;
+    }
+
+}
+
+@include addMediaQuery(tablet) {
+  clip-path: unset;
+
 }
 }
 
 .section-phones {
   position: relative;
   padding: 12.3rem 0;
+
+  @include addMediaQuery(tablet) {
+    padding: 8.3rem 0;
+  
+  }
 
   &::after {
     content: '';
@@ -503,6 +705,12 @@ $breakpoint-tablet: 768px;
     background-color: rgba($color-secondary, 0.5);
     transform: skewY(361.6deg);
     z-index: -1;
+
+    @include addMediaQuery(tablet) {
+      transform: unset;
+      top: 0;
+    }
+
   }
 
   &__text {
@@ -513,6 +721,17 @@ $breakpoint-tablet: 768px;
     height: 100%;
     text-align: center;
 
+    @include addMediaQuery(laptop) {
+      margin: 2rem 0;
+    }
+
+    h1 {
+      @include addMediaQuery(laptop-l) {
+        font-size: 3rem;
+
+  }
+    }
+
     p {
       font-family: 'IBM Plex Sans Arabic', sans-serif;
       font-weight: 500;
@@ -520,6 +739,11 @@ $breakpoint-tablet: 768px;
       line-height: 4.7rem;
       letter-spacing: 0;
       padding: 0 4rem;
+
+      @include addMediaQuery(laptop-l) {
+            font-size: 2rem;
+
+      }
     }
   }
 }
@@ -528,6 +752,10 @@ $breakpoint-tablet: 768px;
   position: relative;
   padding: 12rem 0 22rem 0;
 
+  @include addMediaQuery(laptop-l) {
+    padding: 5rem 0 20rem 0;
+
+}
   &::after {
     content: '';
     position: absolute;
@@ -537,6 +765,20 @@ $breakpoint-tablet: 768px;
     background-color: rgba(245, 238, 223, 0.5);
     transform: skewY(-358.4deg);
     z-index: -1;
+
+    @include addMediaQuery(laptop-l) {
+      top: -4.8rem;
+    }
+
+    @include addMediaQuery(laptop) {
+      top: -9.3rem;
+    }
+
+    @include addMediaQuery(tablet) {
+      transform: unset;
+      top: 0;
+    }
+
   }
 
   &::before {
@@ -552,23 +794,14 @@ $breakpoint-tablet: 768px;
     z-index: -1;
   }
   &__text {
-    max-width: 65rem;
+    max-width: 79rem;
+
+    p {
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
+      font-weight: 400;
+      font-size: 3rem;
+      line-height: 4.5rem;
+      letter-spacing: 0;
+    }
   }
 }
-// .section-customers {
-//   padding: 5rem 0;
-// }
-
-// .section-team {
-//   background-color: $color-grey-1;
-//   padding: 5rem 0;
-// }
-
-
-// .section-partners {
-//   padding: 5rem 0;
-// }
-
-// .section-contact {
-//   padding: 5rem 0;
-// }
