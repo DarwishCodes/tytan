@@ -77,26 +77,81 @@
     }
   }
 
+  &__phones-container {
+    position: relative;
+    z-index: 500;
+    height: 100%;
+    max-width: 96rem;
+    margin: 0 auto;
+
+    @include addMediaQuery(laptop) {
+      max-width: 50rem;
+
+    }
+
+    @include addMediaQuery(phone-l) {
+      // height: auto;
+      width: 100%;
+    }
+  }
+
+  &__phone {
+    position: absolute;
+
+    @include addMediaQuery(laptop) {
+      // height: auto;
+      width: 40%;
+    }
+    @include addMediaQuery(phone-l) {
+      // height: auto;
+      width: 40%;
+    }
+    &--1 {
+      left: 0;
+      bottom: 0;
+      z-index: 20;
+      opacity: 0;
+      animation: phone-left 1s ease-in-out 0.3s 1 normal forwards;
+    }
+
+    &--2 {
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      z-index: 30;
+      opacity: 0;
+      animation: phone-middle 1s ease-in-out 0.5s 1 normal forwards;
+
+    }
+
+    &--3 {
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      opacity: 0;
+      animation: phone-right 1s ease-in-out 0.7s 1 normal forwards;
+    }
+  }
 
   &__shape-container {
     position: relative;
     height: 60rem;
     transform: translateY(1rem);
     
-    img {
-      @include addMediaQuery(laptop) {
-        height: 35rem;
-      }
+    // img {
+    //   @include addMediaQuery(laptop) {
+    //     height: 35rem;
+    //   }
 
-      @include addMediaQuery(laptop) {
-        height: 20rem;
-      }
+    //   @include addMediaQuery(laptop) {
+    //     height: 20rem;
+    //   }
 
-      @include addMediaQuery(phone-l) {
-        height: auto;
-        width: 100%;
-      }
-    }
+    //   @include addMediaQuery(phone-l) {
+    //     height: auto;
+    //     width: 100%;
+    //   }
+    // }
     @include addMediaQuery(laptop) {
       height: 30rem;
     }
@@ -119,6 +174,21 @@
       transform: translateX(-50%);
       z-index: 10;
       bottom: 0;
+
+
+        @include addMediaQuery(laptop) {
+          height: 30rem;
+        }
+  
+        // @include addMediaQuery(laptop) {
+        //   height: 20rem;
+        // }
+  
+        @include addMediaQuery(phone-l) {
+          height: auto;
+          width: 100%;
+        }
+
     }
   }
 

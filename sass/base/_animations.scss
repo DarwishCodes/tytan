@@ -16,3 +16,35 @@
 //     }
 //   }
   
+@keyframes phone-left {
+    0% {
+        transform: translate(3rem ,3rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes phone-middle {
+    0% {
+        transform: translate(-50%, 3rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes phone-right {
+    0% {
+        transform: translate(-3rem ,3rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}

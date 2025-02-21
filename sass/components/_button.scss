@@ -17,9 +17,15 @@
     color: $color-primary;
     background-color: $color-secondary;
     // max-width: 100%;
-    width: 100%;
+    // width: 100%;
     padding: 1.5rem 13rem;
     border-radius: 50px;
+
+    @include addMediaQuery(phone-l) {
+     width: 100%;
+     padding: 1.5rem 2rem;
+
+    }
     &:hover {
       background-color: $color-secondary !important;
       transform: translateY(-3px);
