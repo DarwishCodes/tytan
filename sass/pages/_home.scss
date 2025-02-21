@@ -81,7 +81,8 @@
   &__shape-container {
     position: relative;
     height: 60rem;
-
+    transform: translateY(1rem);
+    
     img {
       @include addMediaQuery(laptop) {
         height: 35rem;
@@ -134,7 +135,7 @@
 
     @include addMediaQuery(desktop) {
       font-size: 2rem;
-      transform: translateY(-9.3rem);
+      transform: translateY(-9rem);
 
     }
 
@@ -236,7 +237,10 @@
   padding-bottom: 20rem;
   
   &__column-reverse {
-    flex-direction: column-reverse;
+    
+    @include addMediaQuery(laptop) {
+      flex-direction: column-reverse;
+    }
   }
   @include addMediaQuery(laptop) {
     direction: rtl;
@@ -379,7 +383,7 @@
     z-index: -1;
     &--1 {
       top: -1rem;
-      right: 9rem;
+      left: 9rem;
 
       @include addMediaQuery(laptop) {
         width: 20%;
@@ -638,6 +642,10 @@
   &__photo-box {
     position: relative;
 
+    @include addMediaQuery(laptop) {
+      margin: 1rem 0;
+    }
+
     img {
       width: 100%;
     }
@@ -660,6 +668,10 @@
   background-position-y: 39%;
   background-size: cover;
 
+  @include addMediaQuery(laptop) {
+    clip-path: unset;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -669,10 +681,9 @@
     width: 47rem;
     height: 46.5rem;
     background: url('../img/shape-letter-t-circle.svg') center/contain no-repeat;
-    // opacity: 0.1;
     z-index: -1;
 
-    @include addMediaQuery(laptop) {
+    @include addMediaQuery(desktop) {
       opacity: 0.3;
     }
     @include addMediaQuery(tablet) {
@@ -706,7 +717,7 @@
     transform: skewY(361.6deg);
     z-index: -1;
 
-    @include addMediaQuery(tablet) {
+    @include addMediaQuery(laptop) {
       transform: unset;
       top: 0;
     }
@@ -771,8 +782,13 @@
     }
 
     @include addMediaQuery(laptop) {
-      top: -9.3rem;
+      transform: unset;
+      top: 0;
     }
+
+    // @include addMediaQuery(tablet) {
+    //   top: -9.7rem;
+    // }
 
     @include addMediaQuery(tablet) {
       transform: unset;

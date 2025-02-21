@@ -17,6 +17,10 @@ body {
     text-rendering: optimizeLegibility;
     letter-spacing: 0;
     font-weight: normal;
+    @include addMediaQuery(laptop) {
+      font-size: 5.2rem;
+
+    }
     @include addMediaQuery(tablet) {
       font-size: 4.2rem;
       line-height: 5rem;
@@ -40,7 +44,8 @@ body {
       @include addMediaQuery(laptop) {
         right: unset;
         right: 50%;
-        transform: translateX(50%);
+        // transform: translateX(50%);
+        transform: translateX(50%) translateY(5px);
       }
       @include addMediaQuery(tablet) {
         width: 10rem;

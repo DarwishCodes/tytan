@@ -79,7 +79,12 @@ $color-star: #FFB800;
     &__nav-arrows-group {
         display: flex;
         justify-content: end;
-        float: left;
+        margin-top: 3rem;
+
+        @include addMediaQuery(laptop) {
+            justify-content: start;
+
+        }
     }
 
     &__arrow {
@@ -91,6 +96,17 @@ $color-star: #FFB800;
         justify-content: center;
         align-items: center;
         margin: 0 1.85rem;
+        user-select: none;
+        cursor: pointer;
+        transition: all 100ms ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:active {
+            transform: scale(1.05);
+        }
 
         img {
             width: 1.3rem;
