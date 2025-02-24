@@ -246,6 +246,9 @@
 
 &__banner-item {
     color: $color-secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     position: relative;
     font-family: 'Lalezar', sans-serif;
@@ -255,31 +258,22 @@
     letter-spacing: 0;
 
 
-    &:not(:first-child)::after {
+    &:not(:last-child)::after {
       content: '';
-      position: absolute;
-      right: -10px;
-      top: 50%;
-      transform: translateY(-50%);
+      display: inline-block;
       width: 30px;
       height: 30px;
-      right: -64px;
       background-image: url("../img/shape-letter-t.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
+      margin-right: 2.2rem;
 
       @include addMediaQuery(desktop) {
         width: 20px;
         height: 20px;
         margin-right: 2rem;
 
-      }
-
-      @include addMediaQuery(tablet) {
-        position: unset;
-        transform: translateY(0);
-        margin-right: 2rem;
       }
   
     }

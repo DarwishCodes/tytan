@@ -932,6 +932,9 @@ body {
         flex-shrink: 0; } }
   .hero__banner-item {
     color: #F5EEDF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     position: relative;
     font-family: 'Lalezar', sans-serif;
@@ -939,28 +942,20 @@ body {
     font-size: 3.192rem;
     line-height: 5.32rem;
     letter-spacing: 0; }
-    .hero__banner-item:not(:first-child)::after {
+    .hero__banner-item:not(:last-child)::after {
       content: '';
-      position: absolute;
-      right: -10px;
-      top: 50%;
-      transform: translateY(-50%);
+      display: inline-block;
       width: 30px;
       height: 30px;
-      right: -64px;
       background-image: url("../img/shape-letter-t.svg");
       background-repeat: no-repeat;
       background-position: center;
-      background-size: contain; }
+      background-size: contain;
+      margin-right: 2.2rem; }
       @media (max-width: 1400px) {
-        .hero__banner-item:not(:first-child)::after {
+        .hero__banner-item:not(:last-child)::after {
           width: 20px;
           height: 20px;
-          margin-right: 2rem; } }
-      @media (max-width: 768px) {
-        .hero__banner-item:not(:first-child)::after {
-          position: unset;
-          transform: translateY(0);
           margin-right: 2rem; } }
     @media (max-width: 1400px) {
       .hero__banner-item {
