@@ -62,7 +62,7 @@ body {
     .heading {
       text-align: center; } }
   .heading--primary {
-    color: #000000CC;
+    color: #333333;
     font-family: "Lalezar", serif;
     font-style: normal;
     font-weight: 400;
@@ -172,7 +172,7 @@ body {
   letter-spacing: 0;
   font-weight: 400;
   word-wrap: break-word;
-  color: #000000CC; }
+  color: #333333; }
   @media (max-width: 991px) {
     .paragraph {
       text-align: center; } }
@@ -332,7 +332,7 @@ body {
   .btn-lang {
     direction: ltr;
     padding: 0.7rem 1.5rem;
-    background-color: #000000CC !important;
+    background-color: #333333 !important;
     color: #ffffff !important;
     font-family: Readex Pro;
     font-weight: 400;
@@ -458,7 +458,7 @@ body {
     font-size: 3.2rem;
     line-height: 4.8rem;
     letter-spacing: 0;
-    color: #000000CC;
+    color: #333333;
     margin-bottom: 1.9rem; }
   .feature__text {
     font-family: inherit;
@@ -737,7 +737,7 @@ body {
     display: flex; }
 
 .nav-link {
-  color: #000000CC;
+  color: #333333;
   margin: 0 1rem;
   font-family: Readex Pro;
   font-weight: 400;
