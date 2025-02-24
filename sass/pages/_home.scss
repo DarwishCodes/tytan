@@ -512,11 +512,19 @@
     &--margin {
       margin-top: 7rem;
       padding: 0 7rem;
+
+      @include addMediaQuery(laptop) {
+        margin-top: 1rem;
+      }
     }
 
     &--margin-2 {
       margin-top: 5rem;
       padding: 0 7rem 0 19rem;
+
+      @include addMediaQuery(laptop) {
+        margin-top: 1rem;
+      }
     }
 
     &--padding {
