@@ -66,6 +66,10 @@
             height: 76.9rem;
             object-fit: contain;
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+
+            @include addMediaQuery(laptop) {
+                height: 58.8rem;
+            }
         }
 
         &--background {

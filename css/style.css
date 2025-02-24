@@ -562,6 +562,9 @@ body {
       height: 76.9rem;
       object-fit: contain;
       box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); }
+      @media (max-width: 991px) {
+        .phone__video--main {
+          height: 58.8rem; } }
     .phone__video--background {
       width: 100%;
       height: 100%;
