@@ -814,7 +814,7 @@ body {
         width: 100%; } }
     @media (max-width: 768px) {
       .hero__primary {
-        line-height: 2rem; } }
+        line-height: 3rem; } }
     @media (max-width: 768px) {
       .hero__primary img {
         width: 7rem;
