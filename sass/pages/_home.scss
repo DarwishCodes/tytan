@@ -20,16 +20,45 @@
     @include addMediaQuery(laptop) {
       text-align: center;
     }
+
+    // @include addMediaQuery(tablet) {
+    //   margin-bottom: 2rem;
+    // }
   }
 
   &__primary {
     text-align: center;
     width: 60%;
+    line-height: 6rem;
 
     @include addMediaQuery(laptop) {
       width: 100%;
     }
 
+    @include addMediaQuery(tablet) {
+      line-height: 2rem;
+    }
+
+    img {
+
+      @include addMediaQuery(tablet) {
+        width: 7rem;
+        bottom: -.5rem;
+      }
+
+    }
+
+  }
+
+  .heading--primary-underline {
+    span {
+      
+
+      @include addMediaQuery(tablet) {
+        margin-bottom: 3rem;
+      }
+
+    }
   }
 
   &__cta {
@@ -314,6 +343,10 @@
     padding: 0 7rem 0 17rem;
     margin-top: 2rem;
 
+    @include addMediaQuery(desktop) {
+      padding: 0 7rem 0 7rem;
+  
+    }
     @include addMediaQuery(laptop) {
       padding: 1rem 0;
       text-align: center;
@@ -516,6 +549,9 @@
       margin-top: 5rem;
       padding: 0 7rem 0 19rem;
 
+      @include addMediaQuery(desktop) {
+        padding: 0 7rem 0 7rem;
+      }
       @include addMediaQuery(laptop) {
         margin-top: 1rem;
       }
@@ -734,7 +770,7 @@
   position: relative;
   padding: 11.1rem 0;
   // background-color: rgba($color-primary, 1);
-  background-image: linear-gradient(rgba($color-primary, 0.83), rgba($color-primary, 0.83)), url(../img/photo-1.png);
+  background-image: linear-gradient(rgba($color-primary, 0.83), rgba($color-primary, 0.83)), url(../img/photo-1.webp);
   // background-blend-mode: multiply;
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 88%);
   background-position-y: 39%;

@@ -12,7 +12,8 @@ body {
     font-family: "Lalezar", serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 6.4rem;
+    // font-size: 6.4rem;
+    font-size: 5rem;
     line-height: 7rem;
     text-rendering: optimizeLegibility;
     letter-spacing: 0;
@@ -34,12 +35,12 @@ body {
   }
 
   &--primary-underline {
-
     position: relative;
     img {
       position: absolute;
       right: 0;
       bottom: -2.5rem;
+      width: 100%;
 
       @include addMediaQuery(laptop) {
         right: unset;
@@ -49,6 +50,7 @@ body {
       }
       @include addMediaQuery(tablet) {
         width: 10rem;
+        // bottom: -2.5rem;
       }
 
     }
@@ -56,6 +58,12 @@ body {
     span {
       margin-bottom: 4rem;
       display: inline-block;
+
+      @include addMediaQuery(tablet) {
+        width: 10rem;
+        // bottom: -2.5rem;
+        // margin-bottom: 3rem;
+      }
     }
 
     &-hero {
@@ -73,6 +81,14 @@ body {
 
       img {
         bottom: -0.5rem;
+        width: 15rem;
+
+        @include addMediaQuery(tablet) {
+          bottom: 1.5rem;
+          width: 10rem;
+
+        }
+        
       }
     }
 
@@ -189,6 +205,10 @@ body {
 
   @include addMediaQuery(laptop) {
     text-align: center;
+  }
+
+  @include addMediaQuery(phone-l) {
+    font-size: 2rem;
   }
 
   &--size-32 {
