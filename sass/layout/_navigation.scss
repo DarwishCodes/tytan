@@ -14,7 +14,7 @@
   &--active {
     position: relative;
     color: $color-primary;
-    
+
     &::after {
       content: "";
       position: absolute;
@@ -23,6 +23,11 @@
       height: 3px;
       background-color: $color-primary;
       transform: translate(.75rem, 3rem);
+
+      @include addMediaQuery(laptop) {
+        display: none;
+    
+      }
     }
   }
 }

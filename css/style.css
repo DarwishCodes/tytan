@@ -923,6 +923,9 @@ body {
       height: 3px;
       background-color: #217951;
       transform: translate(0.75rem, 3rem); }
+      @media (max-width: 991px) {
+        .nav-link--active::after {
+          display: none; } }
 
 .navbar-nav .dropdown-menu {
   position: absolute; }
