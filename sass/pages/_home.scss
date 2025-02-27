@@ -29,7 +29,7 @@
   &__primary {
     text-align: center;
     width: 60%;
-    line-height: 6rem;
+    line-height: 5rem;
 
     @include addMediaQuery(laptop) {
       width: 100%;

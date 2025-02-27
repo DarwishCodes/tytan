@@ -1201,14 +1201,17 @@ body {
     bottom: 0;
     width: 47rem;
     height: 46.5rem;
-    background: url("../img/shape-letter-O-gray.svg") center/contain no-repeat; }
+    background: url("../img/shape-letter-O-gray.svg") center/contain no-repeat;
+    z-index: 10; }
   .download__container {
     max-width: 155.8rem;
     margin: 0 auto;
     padding: 0 6rem;
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    z-index: 20;
+    position: relative; }
     @media (max-width: 991px) {
       .download__container {
         flex-direction: column;
