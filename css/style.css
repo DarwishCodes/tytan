@@ -850,6 +850,8 @@ body {
         padding-left: 0; } }
     .footer__social-links li {
       margin: 0 1rem; }
+      .footer__social-links li a {
+        padding: 1rem; }
   .footer__terms-and-conditions {
     font-family: 'Arial', sans-serif;
     font-weight: 400;
@@ -908,6 +910,17 @@ body {
   letter-spacing: 0%; }
   .nav-link img {
     margin-right: 5px; }
+  .nav-link--active {
+    position: relative;
+    color: #217951; }
+    .nav-link--active::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: #217951;
+      transform: translate(0.75rem, 3rem); }
 
 .navbar-nav .dropdown-menu {
   position: absolute; }
@@ -961,9 +974,9 @@ body {
         margin-bottom: 2rem;
         padding-left: 0; } }
     .contact-us__social-links li {
-      margin: 0 1rem; }
+      margin: 0 0.5rem; }
       .contact-us__social-links li a {
-        padding: 1rem; }
+        padding: 0.5rem; }
   .contact-us__show-mobile {
     display: none; }
     @media (max-width: 991px) {
